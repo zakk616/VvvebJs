@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="../../../../favicon.ico" />
 
     <title>Narrow Jumbotron Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../css/editor.css" rel="stylesheet">
+    <link href="../../css/editor.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="narrow-jumbotron.css" rel="stylesheet">
+    <link href="narrow-jumbotron.css" rel="stylesheet" />
 
     <!-- Animate on scroll library -->
     <script src="../../libs/aos/aos.js"></script>
-    <link href="../../libs/aos/aos.css" rel="stylesheet">
-	<noscript>
-        <style type="text/css">
-            [data-aos] {
-                opacity: 1 !important;
-                transform: translate(0) scale(1) !important;
-            }
-        </style>
-    </noscript>    
-</head>
-	
-  <body>
+    <link href="../../libs/aos/aos.css" rel="stylesheet" />
 
    <header class="header clearfix" id="top-header" data-aos="zoom-in" data-aos-delay="100">
 	<div class="container">
         <nav>
           <ul class="nav nav-pills float-end">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link active" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
@@ -46,8 +40,40 @@
           </ul>
         </nav>
         <h3 class="text-muted">Project name</h3>
+      </div>
+    </header>
+
+
+    <section id="sectionBasicAWInfo">
+      <div class="row showhide">
+        <div class="col-12 d-flex justify-content-end">
+          <a
+            data-toggle="collapse"
+            href="#BASection"
+            role="button"
+            aria-expanded="true"
+            aria-controls="BASection"
+            class="advanced"
+          >
+            Show/ Hide
+            <i class="fa arrow pl-2" aria-hidden="false"></i>
+          </a>
         </div>
-      </header>
+      </div>
+      <div class="card create-idea-card">
+        <div class="card-body">
+          <form id="frm-Idea" enctype="multipart/form-data">
+            <div id="BASection" class="collapse show">
+              <input type="hidden" id="instancHdnID" />
+              <input type="hidden" id="status" />
+              <div class="row">
+                <div class="col-md-6 mb-2">
+                  <label class="form-label" for="drpNPDs">Select NPD</label>
+                  <strong style="color: orangered">*</strong>
+                  <select id="drpNPDs" class="form-control">
+                    <option value="0" disabled>Select NPD</option>
+                  </select>
+                </div>
 
       <section class="jumbotron p-4" id="jumbotron">
 		<div class="container  bg-light">
@@ -137,10 +163,43 @@
 		<div class="container">
 	        <p>© Company 2017</p>
         </div>
-      </footer>
+      </div>
+    </section>
 
-	<script>
-		AOS.init();
-	</script>
-</body>
+    <footer
+      class="footer"
+      id="page-footer"
+      data-aos="fade-up"
+      data-aos-delay="700"
+    >
+      <div class="container">
+        <p>© Company 2017</p>
+      </div>
+    </footer>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!--start summernote libs-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#summernote").summernote({
+          height: 300,
+        });
+      });
+    </script>
+    <!--end summernote libs-->
+  </body>
 </html>
